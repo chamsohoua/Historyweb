@@ -1,0 +1,11 @@
+/* Auth pages */
+.auth-page {
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(160deg,#e8f5ee,#fff8e7,#f0fbfa);
+  padding:var(--sp-8); position:relative; overflow:hidden;
+}
+.auth-page::before {
+  content:''; position:absolute; inset:0;
+  background-image:radial-gradient(circle,rgba(26,143,79,0.07) 1.5px,transparent 1.5px);
+  background-size:28px 28px; pointer-events:none;
+}
