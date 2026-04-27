@@ -1,516 +1,629 @@
-// src/data/timelineData.js
-// Complete Algerian history 1827–2026
-
 export const timelineEvents = [
   {
     id: 'flywhisk',
     year: 1827,
-    title: 'The Fly Whisk Incident',
-    titleAr: 'حادثة المروحة',
-    short: 'The pretext France used to invade Algeria',
-    body: 'The French consul Pierre Deval insulted Dey Hussein of Algiers with his fan during a dispute over debts. France used this diplomatic incident as a pretext to blockade and eventually invade Algeria — beginning 132 years of colonization.',
     icon: '👑',
     color: '#D4AF37',
     category: 'colonial',
     era: 'Ottoman Period',
     importance: 5,
+    content: {
+      en: {
+        title: 'The Fly Whisk Incident',
+        short: 'The pretext France used to invade Algeria',
+        body: 'The French consul Pierre Deval insulted Dey Hussein of Algiers with his fan during a dispute over debts. France used this diplomatic incident as a pretext to blockade and eventually invade Algeria.',
+      },
+      ar: {
+        title: 'حادثة المروحة',
+        short: 'الذريعة التي استخدمتها فرنسا لغزو الجزائر',
+        body: 'أهان القنصل الفرنسي بيير ديفال الداي حسين بمروحته خلال نزاع حول الديون. اتخذت فرنسا هذا الحادث الدبلوماسي ذريعة لمحاصرة الجزائر ثم غزوها لاحقاً.',
+      },
+      fr: {
+        title: "L'Affaire de l'Éventail",
+        short: "Le prétexte utilisé par la France pour envahir l'Algérie",
+        body: "Le consul français Pierre Deval a insulté le Dey Hussein d'Alger avec son éventail lors d'un différend sur des dettes. La France a utilisé cet incident comme prétexte pour le blocus puis l'invasion.",
+      }
+    }
   },
   {
     id: 'invasion1830',
     year: 1830,
-    title: 'French Invasion of Algiers',
-    titleAr: 'الغزو الفرنسي للجزائر',
-    short: 'June 14 — 37,000 French troops land at Sidi Fredj',
-    body: 'On June 14, 1830, a massive French expeditionary force of 37,000 soldiers landed at Sidi Fredj (Sidi Ferruch), just west of Algiers. The Dey Hussein surrendered on July 5. This marked the brutal beginning of French colonial rule that would last 132 years.',
     icon: '⚔️',
     color: '#DC2626',
     category: 'colonial',
     era: 'Colonial Period',
     importance: 5,
+    content: {
+      en: {
+        title: 'French Invasion of Algiers',
+        short: 'June 14 — 37,000 French troops land at Sidi Fredj',
+        body: 'On June 14, 1830, a massive French expeditionary force landed at Sidi Fredj. The Dey Hussein surrendered on July 5, marking the beginning of 132 years of colonial rule.',
+      },
+      ar: {
+        title: 'الغزو الفرنسي للجزائر',
+        short: '14 جوان — نزول 37,000 جندي فرنسي بسيدي فرج',
+        body: 'في 14 جوان 1830، نزلت قوة استكشافية فرنسية ضخمة في سيدي فرج. استسلم الداي حسين في 5 جويلية، مما شكل بداية 132 عاماً من الحكم الاستعماري.',
+      },
+      fr: {
+        title: "Invasion Française d'Alger",
+        short: "14 juin — 37 000 soldats débarquent à Sidi Fredj",
+        body: "Le 14 juin 1830, un corps expéditionnaire français débarque à Sidi Fredj. Le Dey Hussein capitule le 5 juillet, marquant le début de 132 ans de colonisation.",
+      }
+    }
   },
   {
     id: 'abdelkader1832',
     year: 1832,
-    title: 'Emir Abdelkader Elected',
-    titleAr: 'انتخاب الأمير عبد القادر',
-    short: 'The great Emir unifies resistance against France',
-    body: 'Tribes of western Algeria chose Abd al-Qadir ibn Muhieddine as their leader (Amir al-Mu\'minin) to lead jihad against the French occupation. Just 24 years old, he would prove to be one of the greatest military commanders of the 19th century.',
     icon: '🏇',
     color: '#7C3AED',
     category: 'resistance',
     era: 'Abdelkader Era',
     importance: 5,
+    content: {
+      en: {
+        title: 'Emir Abdelkader Elected',
+        short: 'The great Emir unifies resistance against France',
+        body: 'At just 24, Abd al-Qadir ibn Muhieddine was chosen to lead the resistance. He would prove to be one of the greatest military commanders of the 19th century.',
+      },
+      ar: {
+        title: 'مبايعة الأمير عبد القادر',
+        short: 'الأمير العظيم يوحد المقاومة ضد فرنسا',
+        body: 'تم اختيار عبد القادر بن محي الدين لقيادة الجهاد ضد الاحتلال الفرنسي وهو في الـ 24 من عمره. أثبت لاحقاً أنه أحد أعظم القادة العسكريين في القرن التاسع عشر.',
+      },
+      fr: {
+        title: "Élection de l'Émir Abdelkader",
+        short: "Le grand Émir unifie la résistance contre la France",
+        body: "À seulement 24 ans, Abd al-Qadir ibn Muhieddine est choisi pour diriger la résistance. Il s'avérera être l'un des plus grands chefs militaires du XIXe siècle.",
+      }
+    }
   },
   {
     id: 'macta1835',
     year: 1835,
-    title: 'Battle of the Macta',
-    titleAr: 'معركة المقطع',
-    short: 'Major Algerian victory against French forces',
-    body: 'Emir Abdelkader\'s forces ambushed and decisively defeated a French column at the Macta marshes, killing over 200 French soldiers. This was one of the greatest victories of the Algerian resistance and proved that France could not easily conquer the interior.',
     icon: '🛡️',
     color: '#059669',
     category: 'resistance',
     era: 'Abdelkader Era',
     importance: 4,
+    content: {
+      en: {
+        title: 'Battle of the Macta',
+        short: 'Major Algerian victory against French forces',
+        body: 'Emir Abdelkader\'s forces decisively defeated a French column at the Macta marshes, proving that France could not easily conquer the interior.',
+      },
+      ar: {
+        title: 'معركة المقطع',
+        short: 'انتصار جزائري كبير ضد القوات الفرنسية',
+        body: 'هزمت قوات الأمير عبد القادر طابوراً فرنسياً في مستنقعات المقطع، مما أثبت أن فرنسا لا تستطيع غزو المناطق الداخلية بسهولة.',
+      },
+      fr: {
+        title: 'Bataille de la Macta',
+        short: 'Victoire algérienne majeure contre les forces françaises',
+        body: "Les forces de l'Émir Abdelkader ont vaincu une colonne française dans les marais de la Macta, prouvant que la France ne pouvait pas facilement conquérir l'intérieur.",
+      }
+    }
   },
   {
     id: 'tafna1837',
     year: 1837,
-    title: 'Treaty of Tafna',
-    titleAr: 'معاهدة تافنة',
-    short: 'France recognizes Abdelkader\'s state',
-    body: 'France and Emir Abdelkader signed the Treaty of Tafna, officially recognizing a state under Algerian sovereignty covering two-thirds of Algeria. Abdelkader built a functioning state with infrastructure, laws, and an organized army.',
     icon: '📜',
     color: '#F59E0B',
     category: 'resistance',
     era: 'Abdelkader Era',
     importance: 4,
+    content: {
+      en: {
+        title: 'Treaty of Tafna',
+        short: 'France recognizes Abdelkader\'s state',
+        body: 'France and the Emir signed a treaty recognizing Algerian sovereignty over two-thirds of the territory. Abdelkader built a functioning state with its own laws and army.',
+      },
+      ar: {
+        title: 'معاهدة تافنة',
+        short: 'فرنسا تعترف بدولة الأمير عبد القادر',
+        body: 'وقعت فرنسا والأمير معاهدة تعترف بسيادة الجزائر على ثلثي الإقليم. بنى الأمير دولة مؤسسات لها قوانينها وجيشها المنظم.',
+      },
+      fr: {
+        title: 'Traité de la Tafna',
+        short: "La France reconnaît l'État d'Abdelkader",
+        body: "La France et l'Émir signent un traité reconnaissant la souveraineté algérienne sur les deux tiers du territoire. Abdelkader bâtit un État avec ses propres lois et armée.",
+      }
+    }
   },
   {
     id: 'smala1843',
     year: 1843,
-    title: 'Fall of the Smala',
-    titleAr: 'سقوط الزمالة',
-    short: 'France captures Abdelkader\'s mobile capital',
-    body: 'French cavalry under the Duke of Aumale made a surprise raid on the Smala — Abdelkader\'s massive mobile capital of 30,000 people. Though a blow to the resistance, Abdelkader escaped and continued fighting for four more years.',
     icon: '🏕️',
     color: '#EF4444',
     category: 'colonial',
     era: 'Abdelkader Era',
     importance: 3,
+    content: {
+      en: {
+        title: 'Fall of the Smala',
+        short: 'France captures Abdelkader\'s mobile capital',
+        body: 'French cavalry made a surprise raid on the Smala — a mobile city of 30,000 people. Although a major blow, Abdelkader escaped and continued the fight.',
+      },
+      ar: {
+        title: 'سقوط الزمالة',
+        short: 'فرنسا تستولي على عاصمة الأمير المتنقلة',
+        body: 'نفذ الخيالة الفرنسيون غارة مفاجئة على الزمالة، وهي عاصمة متنقلة تضم 30 ألف شخص. رغم الضربة، نجا الأمير واستمر في القتال.',
+      },
+      fr: {
+        title: 'Prise de la Smala',
+        short: "La France capture la capitale mobile d'Abdelkader",
+        body: "La cavalerie française mène un raid surprise sur la Smala, une ville mobile de 30 000 personnes. Malgré ce coup dur, l'Émir s'échappe et continue la lutte.",
+      }
+    }
   },
   {
     id: 'abdelkader1847',
     year: 1847,
-    title: 'Abdelkader\'s Surrender',
-    titleAr: 'استسلام الأمير عبد القادر',
-    short: 'The Emir surrenders after 15 years of resistance',
-    body: 'After 15 years of fierce resistance, Emir Abdelkader surrendered to French General Lamoricière on December 23, 1847, after being promised safe passage to Alexandria or Acre. France violated the promise and imprisoned him for 5 years. He was released in 1852.',
     icon: '🕊️',
     color: '#9CA3AF',
     category: 'resistance',
     era: 'Abdelkader Era',
     importance: 5,
+    content: {
+      en: {
+        title: 'Abdelkader\'s Surrender',
+        short: 'The Emir surrenders after 15 years of resistance',
+        body: 'After 15 years of resistance, the Emir surrendered on December 23, 1847. France violated the promise of safe passage and imprisoned him for 5 years.',
+      },
+      ar: {
+        title: 'استسلام الأمير عبد القادر',
+        short: 'الأمير يستسلم بعد 15 عاماً من المقاومة',
+        body: 'بعد 15 عاماً من المقاومة الشرسة، استسلم الأمير في 23 ديسمبر 1847. نقضت فرنسا وعدها بنقله إلى المشرق وسجنته لمدة 5 سنوات.',
+      },
+      fr: {
+        title: "Reddition d'Abdelkader",
+        short: "L'Émir se rend après 15 ans de résistance",
+        body: "Le 23 décembre 1847, l'Émir se rend. La France viole sa promesse de sauf-conduit et l'emprisonne pendant 5 ans avant sa libération en 1852.",
+      }
+    }
   },
   {
     id: 'zaatcha1849',
     year: 1849,
-    title: 'Revolt of Zaatcha',
-    titleAr: 'ثورة زعاطشة',
-    short: 'Heroic oasis resistance in the Saharan south',
-    body: 'The people of the Zaatcha oasis (Biskra) under Bouziane rose in revolt against French taxation and colonial oppression. After a 3-month siege, French forces captured the oasis. Bouziane and his son were beheaded publicly. The massacre of Zaatcha became a symbol of colonial brutality.',
     icon: '🌴',
     color: '#D97706',
     category: 'resistance',
     era: 'Colonial Consolidation',
     importance: 4,
+    content: {
+      en: {
+        title: 'Revolt of Zaatcha',
+        short: 'Heroic oasis resistance in the Saharan south',
+        body: 'The people of Zaatcha rose against colonial oppression. After a 3-month siege, French forces destroyed the oasis in a massacre that became a symbol of brutality.',
+      },
+      ar: {
+        title: 'ثورة زعاطشة',
+        short: 'مقاومة بطولية في الواحات بالجنوب',
+        body: 'ثار أهل واحة زعاطشة ضد الظلم الاستعماري. بعد حصار دام 3 أشهر، دمرت القوات الفرنسية الواحة في مجزرة أصبحت رمزاً للوحشية.',
+      },
+      fr: {
+        title: 'Révolte de Zaatcha',
+        short: 'Résistance héroïque dans les oasis du Sud',
+        body: "Le peuple de l'oasis de Zaatcha se soulève. Après un siège de 3 mois, les forces françaises massacrent les habitants, un événement devenu symbole de la brutalité coloniale.",
+      }
+    }
   },
   {
     id: 'mokrani1871',
     year: 1871,
-    title: 'Mokrani Revolt',
-    titleAr: 'ثورة المقراني',
-    short: 'The largest 19th century uprising against French rule',
-    body: 'Led by Muhammad al-Muqrani and supported by the Rahmaniyya religious order (Sheikh Ahaddad), this was the largest uprising since Abdelkader. Over 150,000 Algerians rose in revolt across Kabylia and the Tell. France crushed it brutally, confiscating 446,000 hectares of land as punishment.',
     icon: '🔥',
     color: '#DC2626',
     category: 'resistance',
     era: 'Colonial Consolidation',
     importance: 5,
+    content: {
+      en: {
+        title: 'Mokrani Revolt',
+        short: 'The largest 19th century uprising against French rule',
+        body: 'Led by Muhammad al-Muqrani and the Rahmaniyya order, over 150,000 Algerians rose across Kabylia. France crushed it brutally and confiscated vast lands.',
+      },
+      ar: {
+        title: 'ثورة المقراني',
+        short: 'أكبر انتفاضة في القرن 19 ضد الحكم الفرنسي',
+        body: 'بقيادة محمد المقراني والشيخ الحداد، ثار أكثر من 150 ألف جزائري في منطقة القبائل. سحقت فرنسا الثورة وصادرت مساحات شاسعة من الأراضي.',
+      },
+      fr: {
+        title: 'Révolte des Mokrani',
+        short: 'Le plus grand soulèvement du XIXe siècle',
+        body: "Menés par El Mokrani et Cheikh Ahaddad, 150 000 Algériens se soulèvent en Kabylie. La répression est brutale et entraîne la confiscation de terres massives.",
+      }
+    }
   },
   {
     id: 'naturalisation1889',
     year: 1889,
-    title: 'Naturalization Law',
-    titleAr: 'قانون التجنيس',
-    short: 'Europeans automatically become French citizens, Muslims excluded',
-    body: 'France passed a law automatically naturalizing all Europeans born in Algeria as French citizens. Muslims were explicitly excluded unless they formally renounced Islamic personal status law — a condition most refused. This created an apartheid-like two-tier society.',
     icon: '⚖️',
     color: '#6B7280',
     category: 'colonial',
     era: 'Colonial Consolidation',
     importance: 3,
+    content: {
+      en: {
+        title: 'Naturalization Law',
+        short: 'Europeans become citizens, Muslims excluded',
+        body: 'France automatically naturalized Europeans born in Algeria, but excluded Muslims unless they renounced Islamic law, creating a two-tier society.',
+      },
+      ar: {
+        title: 'قانون التجنيس',
+        short: 'الأوروبيون يصبحون مواطنين والمسلمون مستبعدون',
+        body: 'منحت فرنسا الجنسية تلقائياً للأوروبيين المولودين في الجزائر، بينما استبعدت المسلمين إلا بشرط التخلي عن أحوالهم الشخصية الإسلامية.',
+      },
+      fr: {
+        title: 'Loi sur la Naturalisation',
+        short: 'Citoyenneté pour les Européens, exclusion des Musulmans',
+        body: "La France naturalise d'office les Européens d'Algérie. Les Musulmans restent des 'indigènes', créant une société à deux vitesses.",
+      }
+    }
   },
   {
     id: 'ww1algerians',
     year: 1914,
-    title: 'Algerians in World War I',
-    titleAr: 'الجزائريون في الحرب العالمية الأولى',
-    short: '300,000 Algerians drafted to fight for France',
-    body: 'Over 300,000 Algerian men were conscripted into the French army during WWI. Around 35,000 died on European battlefields. Algerians fought and died for France while remaining denied basic citizenship rights in their own country. This contradiction fueled the independence movement.',
     icon: '🪖',
     color: '#78350F',
     category: 'colonial',
     era: 'Early Nationalism',
     importance: 4,
+    content: {
+      en: {
+        title: 'Algerians in World War I',
+        short: '300,000 Algerians drafted to fight for France',
+        body: 'Algerians fought and died for France while being denied basic rights at home. This contradiction fueled the later independence movement.',
+      },
+      ar: {
+        title: 'الجزائريون في الحرب العالمية الأولى',
+        short: 'تجنيد 300 ألف جزائري للقتال مع فرنسا',
+        body: 'قاتل الجزائريون وماتوا من أجل فرنسا بينما حُرموا من حقوق المواطنة في بلدهم. غذى هذا التناقض الحركات الوطنية لاحقاً.',
+      },
+      fr: {
+        title: 'Les Algériens dans la Grande Guerre',
+        short: '300 000 Algériens mobilisés pour la France',
+        body: "Les Algériens combattent pour la France mais restent privés de droits civiques chez eux. Cette contradiction alimentera le désir d'indépendance.",
+      }
+    }
   },
   {
     id: 'ena1926',
     year: 1926,
-    title: 'ENA Founded — First Independence Movement',
-    titleAr: 'تأسيس نجم شمال أفريقيا',
-    short: 'Messali Hadj founds Algeria\'s first independence organization',
-    body: 'Messali Hadj founded the Étoile Nord-Africaine (North African Star) in Paris — the first explicitly independence-seeking political organization for Algerians. It was the seed from which the independence movement would grow. France banned it multiple times but it kept reforming.',
     icon: '⭐',
     color: '#7C3AED',
     category: 'nationalism',
     era: 'Early Nationalism',
     importance: 5,
+    content: {
+      en: {
+        title: 'ENA Founded',
+        short: 'First explicitly independence-seeking organization',
+        body: 'Messali Hadj founded the Étoile Nord-Africaine in Paris. It was the seed from which the movement for complete independence would grow.',
+      },
+      ar: {
+        title: 'تأسيس نجم شمال أفريقيا',
+        short: 'أول منظمة طالبت بالاستقلال الصريح',
+        body: 'أسس مصالي الحاج نجم شمال أفريقيا في باريس. كانت هذه المنظمة النواة الأولى التي انبثقت منها المطالبة بالاستقلال التام.',
+      },
+      fr: {
+        title: "Fondation de l'Étoile Nord-Africaine",
+        short: "Première organisation revendiquant l'indépendance",
+        body: "Messali Hadj fonde l'ENA à Paris. C'est la première structure politique à réclamer explicitement l'indépendance de l'Algérie.",
+      }
+    }
   },
   {
     id: 'manifest1943',
     year: 1943,
-    title: 'Manifesto of the Algerian People',
-    titleAr: 'بيان الشعب الجزائري',
-    short: 'Ferhat Abbas demands political equality and autonomy',
-    body: 'Ferhat Abbas and nationalist leaders presented the Manifesto of the Algerian People to French authorities, demanding equality, abolition of colonialism, and political autonomy. France ignored it. This document marked a turning point — moderate reform was dying as an option.',
     icon: '📋',
     color: '#F59E0B',
     category: 'nationalism',
     era: 'WWII & Awakening',
     importance: 4,
+    content: {
+      en: {
+        title: 'Manifesto of the Algerian People',
+        short: 'Ferhat Abbas demands equality and autonomy',
+        body: 'Nationalist leaders presented a document demanding the abolition of colonialism. Its rejection by France pushed the movement toward revolution.',
+      },
+      ar: {
+        title: 'بيان الشعب الجزائري',
+        short: 'فرحات عباس يطالب بالمساواة والحكم الذاتي',
+        body: 'قدم القادة الوطنيون وثيقة تطالب بإلغاء الاستعمار. أدى رفض فرنسا للبيان إلى تحول الحركة نحو العمل الثوري المسلح.',
+      },
+      fr: {
+        title: 'Manifeste du Peuple Algérien',
+        short: "Ferhat Abbas réclame l'égalité et l'autonomie",
+        body: "Les leaders nationalistes exigent l'abolition du colonialisme. Le refus français marque un tournant vers la fin des réformes modérées.",
+      }
+    }
   },
   {
     id: 'setif1945',
     year: 1945,
-    title: 'Sétif & Guelma Massacres',
-    titleAr: 'مجازر سطيف وقالمة',
-    short: 'May 8 — France massacres thousands celebrating end of WWII',
-    body: 'On V-E Day (May 8, 1945), Algerians marched celebrating the end of WWII and demanding independence. French police fired on demonstrators in Sétif when they displayed Algerian flags. This sparked a broader uprising. France responded with mass massacres — aerial bombardment of villages, naval gunfire, and systematic execution. Between 6,000 and 45,000 Algerians were killed. This event traumatized a generation and made independence the only option.',
     icon: '💔',
     color: '#DC2626',
     category: 'resistance',
     era: 'WWII & Awakening',
     importance: 5,
+    content: {
+      en: {
+        title: 'Sétif & Guelma Massacres',
+        short: 'May 8 — France massacres thousands on V-E Day',
+        body: 'While celebrating the end of WWII, Algerians demanded independence. France responded with massacres that killed up to 45,000 people.',
+      },
+      ar: {
+        title: 'مجازر سطيف وقالمة',
+        short: '8 ماي — فرنسا ترتكب مجازر مروعة ضد المتظاهرين',
+        body: 'بينما كان العالم يحتفل بنهاية الحرب العالمية الثانية، طالب الجزائريون باستقلالهم. ردت فرنسا بمجازر خلفت حوالي 45 ألف شهيد.',
+      },
+      fr: {
+        title: 'Massacres de Sétif et Guelma',
+        short: '8 mai 1945 — La France massacre des milliers de civils',
+        body: "Lors de la célébration de la victoire alliée, les Algériens manifestent pour l'indépendance. La répression fait des milliers de victimes (jusqu'à 45 000).",
+      }
+    }
   },
   {
     id: 'os1947',
     year: 1947,
-    title: 'Organisation Spéciale (OS) Founded',
-    titleAr: 'تأسيس المنظمة الخاصة',
-    short: 'Secret paramilitary cell prepares for armed revolution',
-    body: 'The Organisation Spéciale was a secret paramilitary wing of the MTLD, created to prepare an armed insurrection. Among its early leaders were Hocine Aït Ahmed and Ahmed Ben Bella. When France discovered and dismantled the OS in 1950, its members went underground and began planning what would become the November 1 Revolution.',
     icon: '🤫',
     color: '#374151',
     category: 'nationalism',
     era: 'Road to Revolution',
     importance: 4,
+    content: {
+      en: {
+        title: 'Organisation Spéciale (OS) Founded',
+        short: 'Secret paramilitary cell prepares for armed revolution',
+        body: 'A secret wing created to prepare for insurrection. Its members, like Ben Bella and Aït Ahmed, would later lead the November 1st revolution.',
+      },
+      ar: {
+        title: 'تأسيس المنظمة الخاصة',
+        short: 'جناح سري للتحضير للثورة المسلحة',
+        body: 'أنشئت لتحضير العمل المسلح. قادتها مثل بن بلة وآيت أحمد هم من خططوا لاحقاً لاندلاع ثورة أول نوفمبر.',
+      },
+      fr: {
+        title: "Fondation de l'Organisation Spéciale (OS)",
+        short: "Cellule secrète préparant l'insurrection armée",
+        body: "Branche armée du MTLD. Ses membres, dont Ben Bella, préparent les structures militaires de la future révolution.",
+      }
+    }
   },
   {
     id: 'revolution1954',
     year: 1954,
-    title: 'November 1 — The Revolution Begins',
-    titleAr: 'أول نوفمبر — انطلاق الثورة التحريرية',
-    short: 'The FLN launches simultaneous attacks across Algeria',
-    body: 'At midnight between October 31 and November 1, 1954, the FLN (Front de Libération Nationale) launched 70 simultaneous armed attacks across Algeria. The "Toussaint Rouge" (Bloody All Saints\' Day) struck police stations, military depots, and infrastructure. This night changed history forever. The founding nine leaders — the "Historic Nine" — declared: "Either die or win our freedom."',
     icon: '🔥',
     color: '#D4AF37',
     category: 'revolution',
     era: 'The Revolution',
     importance: 5,
+    content: {
+      en: {
+        title: 'November 1 — The Revolution Begins',
+        short: 'The FLN launches simultaneous attacks across Algeria',
+        body: 'At midnight, the FLN struck 70 military and police targets. The "Historic Nine" declared: "Either victory or martyrdom."',
+      },
+      ar: {
+        title: 'اندلاع ثورة أول نوفمبر',
+        short: 'جبهة التحرير تشن هجمات متزامنة في كل القطر',
+        body: 'في منتصف الليل، نفذت جبهة التحرير الوطني 70 هجوماً ضد أهداف عسكرية. أعلن القادة التاريخيون: "الشهادة أو النصر".',
+      },
+      fr: {
+        title: 'Déclenchement de la Révolution',
+        short: 'Le FLN lance des attaques simultanées le 1er novembre',
+        body: "À minuit, le FLN frappe 70 cibles militaires. La proclamation du 1er novembre appelle à l'indépendance totale de l'Algérie.",
+      }
+    }
   },
   {
     id: 'philippeville1955',
     year: 1955,
-    title: 'Philippeville Events',
-    titleAr: 'أحداث فيليبفيل (سكيكدة)',
-    short: 'August 20 — Revolution spreads to eastern Algeria',
-    body: 'The FLN under Zighoud Youcef launched massive coordinated attacks in northeastern Algeria on August 20, 1955. This anniversary of the deposition of Sultan Mohammed V of Morocco became a defining moment that spread the revolution from small cells to mass popular uprising.',
     icon: '⚡',
     color: '#F97316',
     category: 'revolution',
     era: 'The Revolution',
     importance: 4,
+    content: {
+      en: {
+        title: 'Philippeville Events',
+        short: 'August 20 — Revolution spreads to the east',
+        body: 'Coordinated attacks in Skikda and surrounding areas marked a point of no return, turning the revolution into a mass popular uprising.',
+      },
+      ar: {
+        title: 'هجومات الشمال القسنطيني',
+        short: '20 أوت — الثورة تمتد إلى الشرق الجزائري',
+        body: 'هجمات منسقة في سكيكدة وضواحيها شكلت نقطة تحول، حيث حولت الثورة إلى انتفاضة شعبية عارمة.',
+      },
+      fr: {
+        title: 'Offensive du Nord-Constantinois',
+        short: "20 août — La révolution s'étend à l'Est",
+        body: "Attaques coordonnées sous l'impulsion de Zighoud Youcef. Cet événement marque l'adhésion massive du peuple à la révolution.",
+      }
+    }
   },
   {
     id: 'soummam1956',
     year: 1956,
-    title: 'Soummam Congress',
-    titleAr: 'مؤتمر الصومام',
-    short: 'The FLN establishes a political structure for the revolution',
-    body: 'On August 20, 1956, in the Soummam Valley in Kabylia, the FLN held its first major congress. Led by Abane Ramdane and Larbi Ben M\'hidi, the congress established a governing structure (CNRA, CCE), defined political principles (primacy of politics over military, interior over exterior), and organized the revolution as a genuine national liberation movement.',
     icon: '📜',
     color: '#10B981',
     category: 'revolution',
     era: 'The Revolution',
     importance: 5,
+    content: {
+      en: {
+        title: 'Soummam Congress',
+        short: 'The FLN establishes a political structure',
+        body: 'The first major congress organized the revolution with clear principles, establishing the priority of politics over military action.',
+      },
+      ar: {
+        title: 'مؤتمر الصومام',
+        short: 'جبهة التحرير تضع الهيكل السياسي للثورة',
+        body: 'أول مؤتمر ينظم الثورة بمبادئ واضحة، مقراً أولوية السياسي على العسكري والداخل على الخارج.',
+      },
+      fr: {
+        title: 'Congrès de la Soummam',
+        short: 'Le FLN structure la révolution',
+        body: "Le congrès définit les objectifs politiques et militaires, instaurant la primauté du politique sur le militaire.",
+      }
+    }
   },
   {
     id: 'balgiers1957',
     year: 1957,
-    title: 'Battle of Algiers',
-    titleAr: 'معركة الجزائر العاصمة',
-    short: 'Urban guerrilla warfare shocks the world',
-    body: 'The FLN launched a campaign of urban warfare in Algiers, with bombings in European quarters. France gave General Massu\'s paratroopers unlimited authority, leading to the systematic torture of thousands of Algerians. The Battle of Algiers exposed the brutality of French colonialism and shifted international opinion toward independence. Larbi Ben M\'hidi was captured and secretly executed.',
     icon: '🏙️',
     color: '#DC2626',
     category: 'revolution',
     era: 'The Revolution',
     importance: 5,
+    content: {
+      en: {
+        title: 'Battle of Algiers',
+        short: 'Urban guerrilla warfare shocks the world',
+        body: 'Urban warfare in the capital exposed the brutality of colonial forces and shifted international opinion toward independence.',
+      },
+      ar: {
+        title: 'معركة الجزائر',
+        short: 'حرب العصابات في المدن تهز العالم',
+        body: 'حرب شوارع في العاصمة كشفت وحشية القوات الاستعمارية وغيرت الرأي العام الدولي لصالح القضية الجزائرية.',
+      },
+      fr: {
+        title: "Bataille d'Alger",
+        short: 'La guérilla urbaine sous les yeux du monde',
+        body: "Une lutte acharnée au cœur de la Casbah. La répression brutale médiatise le conflit à l'échelle internationale.",
+      }
+    }
   },
   {
     id: 'gpra1958',
     year: 1958,
-    title: 'Provisional Government (GPRA) Formed',
-    titleAr: 'تأسيس الحكومة المؤقتة للجمهورية الجزائرية',
-    short: 'Algeria forms its government-in-exile in Cairo',
-    body: 'On September 19, 1958, the Gouvernement Provisoire de la République Algérienne (GPRA) was formed in Cairo under Ferhat Abbas. This provisional government was immediately recognized by Arab, Asian, and African states, establishing Algeria\'s international legitimacy as a nation-in-waiting.',
     icon: '🏛️',
     color: '#7C3AED',
     category: 'revolution',
     era: 'The Revolution',
     importance: 4,
+    content: {
+      en: {
+        title: 'GPRA Formed',
+        short: 'Algeria forms its government-in-exile in Cairo',
+        body: 'The Provisional Government (GPRA) was established to give the revolution a formal diplomatic and political voice on the world stage.',
+      },
+      ar: {
+        title: 'تأسيس الحكومة المؤقتة',
+        short: 'الجزائر تشكل حكومتها في المنفى بالقاهرة',
+        body: 'تأسست الحكومة المؤقتة للجمهورية الجزائرية لتمثيل الثورة دبلوماسياً وسياسياً أمام العالم.',
+      },
+      fr: {
+        title: 'Création du GPRA',
+        short: 'Le gouvernement provisoire s’installe au Caire',
+        body: "Le GPRA est formé pour représenter officiellement l'Algérie en lutte sur la scène diplomatique mondiale.",
+      }
+    }
   },
   {
     id: 'degaulle1960',
     year: 1960,
-    title: 'De Gaulle\'s "Algerian Algeria" Speech',
-    titleAr: 'خطاب ديغول حول "الجزائر الجزائرية"',
-    short: 'France begins to accept Algerian self-determination',
-    body: 'On November 4, 1960, President Charles de Gaulle gave a speech acknowledging the possibility of an "Algerian Algeria" — a dramatic shift from France\'s claim that Algeria was an integral part of France. This marked the beginning of France\'s acceptance of independence as inevitable.',
     icon: '📢',
     color: '#3B82F6',
     category: 'revolution',
     era: 'Road to Independence',
     importance: 4,
+    content: {
+      en: {
+        title: 'De Gaulle\'s Speech',
+        short: 'France begins to accept self-determination',
+        body: 'President De Gaulle acknowledged the possibility of an "Algerian Algeria," signaling the beginning of the end for French rule.',
+      },
+      ar: {
+        title: 'خطاب ديغول',
+        short: 'فرنسا تبدأ في قبول تقرير المصير',
+        body: 'اعترف الرئيس ديغول بإمكانية وجود "جزائر جزائرية"، مما شكل بداية النهاية للحكم الفرنسي.',
+      },
+      fr: {
+        title: "Discours de De Gaulle",
+        short: "La France accepte l'autodétermination",
+        body: "Charles de Gaulle évoque une 'Algérie algérienne', ouvrant la voie à la fin inévitable de la colonisation.",
+      }
+    }
   },
   {
     id: 'evian1962',
     year: 1962,
-    title: 'Evian Accords — Ceasefire',
-    titleAr: 'اتفاقيات إيفيان — وقف إطلاق النار',
-    short: 'March 19 — End of the war after 7.5 years',
-    body: 'On March 18, 1962, France and the GPRA signed the Evian Accords, ending the Algerian War of Independence after 7.5 years. A ceasefire took effect at noon on March 19. The accords provided for a self-determination referendum. March 19 became the National Ceasefire Day (Yawm al-Intisar) — a day of quiet memory for the 1.5 million martyrs.',
     icon: '🕊️',
     color: '#10B981',
     category: 'revolution',
     era: 'Independence',
     importance: 5,
+    content: {
+      en: {
+        title: 'Evian Accords',
+        short: 'March 19 — Ceasefire after 7.5 years of war',
+        body: 'The signing of the accords ended the war and paved the way for the referendum on independence.',
+      },
+      ar: {
+        title: 'اتفاقيات إيفيان',
+        short: '19 مارس — وقف إطلاق النار بعد سنوات من الحرب',
+        body: 'أنهى توقيع الاتفاقيات الحرب ومهد الطريق لاستفتاء تقرير المصير والاستقلال.',
+      },
+      fr: {
+        title: "Accords d'Évian",
+        short: "19 mars — Cessez-le-feu après 7 ans de guerre",
+        body: "La signature des accords met fin aux combats et organise le référendum d'autodétermination.",
+      }
+    }
   },
   {
     id: 'independence1962',
     year: 1962,
-    title: 'July 5 — Independence Day!',
-    titleAr: 'الخامس من يوليو — يوم الاستقلال!',
-    short: '132 years of colonization end. Algeria is free!',
-    body: 'On July 1, 1962, 99.72% of Algerians voted for independence in a referendum. France officially recognized Algerian independence on July 3. On July 5, 1962 — exactly 132 years after the French first captured Algiers — Algeria was declared independent. Millions poured into the streets in scenes of euphoric celebration that the world will never forget.',
     icon: '🌟',
     color: '#D4AF37',
     category: 'independence',
     era: 'Independence',
     importance: 5,
+    content: {
+      en: {
+        title: 'July 5 — Independence Day!',
+        short: '132 years of colonization end. Algeria is free!',
+        body: 'After a landslide vote, Algeria was declared independent on the 132nd anniversary of the capture of Algiers.',
+      },
+      ar: {
+        title: '5 جويلية — يوم الاستقلال!',
+        short: 'انتهاء 132 سنة من الاستعمار. الجزائر حرة!',
+        body: 'بعد تصويت تاريخي، أُعلن استقلال الجزائر في الذكرى الـ 132 لسقوط العاصمة في يد الاحتلال.',
+      },
+      fr: {
+        title: "5 Juillet — L'Indépendance !",
+        short: "Fin de 132 ans de colonisation. L'Algérie est libre !",
+        body: "Après un référendum massif, l'Algérie proclame son indépendance, 132 ans jour pour jour après la chute d'Alger.",
+      }
+    }
   },
   {
     id: 'benbella1962',
     year: 1963,
-    title: 'Ahmed Ben Bella — First President',
-    titleAr: 'أحمد بن بلة — أول رئيس',
-    short: 'Algeria elects its first president under a new constitution',
-    body: 'Ahmed Ben Bella became Algeria\'s first elected President on September 15, 1963, under a new one-party constitution. Ben Bella championed Arab socialism, supported liberation movements across Africa, and hosted figures like Che Guevara, Malcolm X, and Nelson Mandela. Algeria became a hub for Third World solidarity.',
     icon: '🎗️',
     color: '#059669',
     category: 'postindependence',
     era: 'Building the Nation',
     importance: 4,
-  },
-  {
-    id: 'boumediene1965',
-    year: 1965,
-    title: 'Boumediene\'s Revolution Corrective',
-    titleAr: 'التصحيح الثوري — هواري بومدين',
-    short: 'Military coup replaces Ben Bella with Boumediene',
-    body: 'Colonel Houari Boumediene led a bloodless military coup on June 19, 1965, deposing Ben Bella. Boumediene ruled until his death in 1978, nationalizing oil and gas industries (1971), and launching massive industrialization. His era built roads, schools, hospitals, and the "agrarian revolution" — transforming Algeria into a modern state.',
-    icon: '🏗️',
-    color: '#374151',
-    category: 'postindependence',
-    era: 'Building the Nation',
-    importance: 4,
-  },
-  {
-    id: 'hydrocarbons1971',
-    year: 1971,
-    title: 'Nationalization of Oil & Gas',
-    titleAr: 'تأميم المحروقات',
-    short: 'Algeria takes control of its oil & gas wealth',
-    body: 'On February 24, 1971, President Boumediene nationalized 51% of French oil company operations and 100% of gas, creating Sonatrach (which became Africa\'s largest company). This was one of the most celebrated economic moves in Algerian history — the natural resources of Algeria finally belonged to Algerians.',
-    icon: '🛢️',
-    color: '#D97706',
-    category: 'postindependence',
-    era: 'Building the Nation',
-    importance: 5,
-  },
-  {
-    id: 'charter1976',
-    year: 1976,
-    title: 'National Charter & New Constitution',
-    titleAr: 'الميثاق الوطني والدستور الجديد',
-    short: 'Algeria defines itself as a socialist, one-party state',
-    body: 'Algeria adopted its National Charter in 1976, defining the country as a democratic, socialist, one-party state under the FLN. The new constitution was approved by referendum. Algeria was charting its own course between the Western and Soviet blocs in the Non-Aligned Movement.',
-    icon: '📖',
-    color: '#7C3AED',
-    category: 'postindependence',
-    era: 'Building the Nation',
-    importance: 3,
-  },
-  {
-    id: 'chadli1979',
-    year: 1979,
-    title: 'Chadli Bendjedid Becomes President',
-    titleAr: 'الشاذلي بن جديد رئيساً',
-    short: 'Post-Boumediene era begins with economic liberalization',
-    body: 'After Boumediene\'s death in December 1978, Chadli Bendjedid was elected president in 1979. His era saw economic liberalization, loosening of state controls, and growing inequality — which sowed the seeds of the 1988 social explosion. Algeria\'s oil revenues funded a welfare state but also growing corruption.',
-    icon: '🔄',
-    color: '#6B7280',
-    category: 'postindependence',
-    era: 'Reform Era',
-    importance: 3,
-  },
-  {
-    id: 'october1988',
-    year: 1988,
-    title: 'October Riots — Black October',
-    titleAr: 'أحداث أكتوبر — أكتوبر الأسود',
-    short: 'Youth uprising forces multiparty democracy',
-    body: 'On October 5-10, 1988, thousands of young Algerians took to the streets across major cities, protesting high unemployment, corruption, and lack of freedoms. The government declared a state of emergency and the army opened fire, killing over 500 protesters. This "Black October" fundamentally changed Algeria — forcing Chadli to introduce multiparty democracy.',
-    icon: '✊',
-    color: '#DC2626',
-    category: 'modern',
-    era: 'Democratic Opening',
-    importance: 5,
-  },
-  {
-    id: 'constitution1989',
-    year: 1989,
-    title: 'New Constitution — Multi-Party System',
-    titleAr: 'دستور 1989 — التعددية الحزبية',
-    short: 'Algeria opens up to political pluralism',
-    body: 'Following Black October, a new constitution was adopted on February 23, 1989, which effectively abandoned the single-party system, guaranteed freedom of expression and association, and allowed multiple political parties. Over 50 parties registered within months. This was the most democratic moment in Algerian post-independence history.',
-    icon: '🗳️',
-    color: '#10B981',
-    category: 'modern',
-    era: 'Democratic Opening',
-    importance: 5,
-  },
-  {
-    id: 'elections1991',
-    year: 1991,
-    title: 'First Multi-Party Elections',
-    titleAr: 'أول انتخابات تعددية',
-    short: 'FIS wins first round — army cancels elections',
-    body: 'In December 1991, the first round of parliamentary elections gave the Islamic Salvation Front (FIS) a massive majority. Facing a likely FIS sweep in the second round, the military forced President Chadli to resign, dissolved parliament, and cancelled the elections on January 11, 1992. This decision plunged Algeria into a devastating civil war.',
-    icon: '🗳️',
-    color: '#6B7280',
-    category: 'modern',
-    era: 'Democratic Opening',
-    importance: 5,
-  },
-  {
-    id: 'civilwar1992',
-    year: 1992,
-    title: 'The Black Decade Begins',
-    titleAr: 'بداية العشرية السوداء',
-    short: 'Civil war kills between 100,000 and 200,000 Algerians',
-    body: 'After elections were cancelled, Algeria descended into a brutal civil war between the military government and various armed Islamist groups (GIA, MIA, AIS). The 1990s "Black Decade" (la décennie noire) saw terrorist attacks, massacres of entire villages, assassinations of intellectuals, journalists, and foreigners. Between 100,000 and 200,000 Algerians died in a decade of darkness.',
-    icon: '⚫',
-    color: '#1F2937',
-    category: 'modern',
-    era: 'Black Decade',
-    importance: 5,
-  },
-  {
-    id: 'bouteflika1999',
-    year: 1999,
-    title: 'Bouteflika Elected — Civil Concord',
-    titleAr: 'بوتفليقة والوئام المدني',
-    short: 'Civil war ends; 20 years of Bouteflika\'s rule begins',
-    body: 'Abdelaziz Bouteflika won the presidential election in April 1999 (other candidates withdrew claiming fraud). He quickly passed the Civil Concord law, offering amnesty to armed group members who surrendered. By 2002, most armed groups had laid down their weapons. Bouteflika rebuilt Algeria\'s international standing and managed oil wealth through the 2000s boom.',
-    icon: '🤝',
-    color: '#059669',
-    category: 'modern',
-    era: 'Reconstruction',
-    importance: 5,
-  },
-  {
-    id: 'kabyliespring2001',
-    year: 2001,
-    title: 'Kabylie Black Spring',
-    titleAr: 'ربيع منطقة القبائل الأسود',
-    short: 'Amazigh protests demand cultural and language rights',
-    body: 'The killing of young Masinissa Guermah by gendarmerie in April 2001 sparked massive protests across Kabylia. The "Black Spring" lasted months, with over 100 protesters killed. These events led to official recognition of Amazigh (Tamazight) as a national language in the 2002 constitutional revision — a major cultural milestone for Berber identity.',
-    icon: '🌿',
-    color: '#D97706',
-    category: 'modern',
-    era: 'Reconstruction',
-    importance: 4,
-  },
-  {
-    id: 'constitution2016',
-    year: 2016,
-    title: 'Constitutional Revision — Tamazight Official',
-    titleAr: 'التعديل الدستوري — الأمازيغية لغة رسمية',
-    short: 'Tamazight becomes an official language of Algeria',
-    body: 'The 2016 constitutional revision elevated Tamazight (Berber) to the status of official national language, alongside Arabic. This was a historic recognition of Algeria\'s Amazigh heritage after decades of struggle. The revision also limited presidential terms to two.',
-    icon: '📜',
-    color: '#7C3AED',
-    category: 'modern',
-    era: 'Contemporary Algeria',
-    importance: 4,
-  },
-  {
-    id: 'hirak2019',
-    year: 2019,
-    title: 'The Hirak — Popular Revolution',
-    titleAr: 'الحراك الشعبي',
-    short: 'Feb 22 — Millions march every Friday demanding change',
-    body: 'On February 22, 2019, millions of Algerians took to the streets to protest President Bouteflika\'s announced fifth presidential term. Every Friday for over a year, peaceful demonstrations of unprecedented scale swept across Algeria — "Algérie libre et démocratique." Bouteflika resigned on April 2, 2019. The Hirak was the largest social movement in Algeria since 1988 — and perhaps in all of North Africa.',
-    icon: '🌊',
-    color: '#D4AF37',
-    category: 'modern',
-    era: 'Contemporary Algeria',
-    importance: 5,
-  },
-  {
-    id: 'constitution2020',
-    year: 2020,
-    title: 'New Constitution — 2020',
-    titleAr: 'دستور 2020',
-    short: 'Post-Hirak constitutional reform',
-    body: 'A new constitution was approved by referendum in November 2020, incorporating several reforms: allowing military deployment abroad, creating an investment mechanism, reinforcing national identity clauses. The constitution retained the presidential system while adding some social rights. Algeria opened a new chapter in its governance.',
-    icon: '🏛️',
-    color: '#374151',
-    category: 'modern',
-    era: 'Contemporary Algeria',
-    importance: 3,
-  },
-  {
-    id: 'independence60',
-    year: 2022,
-    title: '60th Anniversary of Independence',
-    titleAr: 'الذكرى الستون للاستقلال',
-    short: 'Algeria celebrates six decades of sovereignty',
-    body: 'Algeria celebrated the 60th anniversary of independence on July 5, 2022, with massive ceremonies, cultural events, and reflection on the sacrifices of the liberation generation. A new generation of Algerians honored the 1.5 million martyrs of the revolution while looking forward to a modern, prosperous future.',
-    icon: '🎉',
-    color: '#10B981',
-    category: 'modern',
-    era: 'Contemporary Algeria',
-    importance: 3,
-  },
-  {
-    id: 'today2026',
-    year: 2026,
-    title: 'Algeria Today',
-    titleAr: 'الجزائر اليوم',
-    short: 'A nation of 47 million looking toward the future',
-    body: 'Today Algeria stands as Africa\'s largest country by area, with a population of 47 million, vast oil and gas reserves, and a new generation determined to build on the sacrifices of their ancestors. Algeria continues its journey — honoring a proud past while building a modern, just, and democratic future for all its citizens.',
-    icon: '🇩🇿',
-    color: '#D4AF37',
-    category: 'modern',
-    era: 'Contemporary Algeria',
-    importance: 4,
-  },
+    content: {
+      en: {
+        title: 'Ahmed Ben Bella — First President',
+        short: 'Algeria elects its first president',
+        body: 'Ben Bella became the first president of the Republic, focusing on socialism and support for liberation movements worldwide.',
+      },
+      ar: {
+        title: 'أحمد بن بلة — أول رئيس',
+        short: 'الجزائر تنتخب أول رئيس لها',
+        body: 'أصبح أحمد بن بلة أول رئيس للجمهورية، مركّزاً على النهج الاشتراكي ودعم حركات التحرر في العالم.',
+      },
+      fr: {
+        title: 'Ahmed Ben Bella — 1er Président',
+        short: "L'Algérie élit son premier président",
+        body: "Ben Bella devient le premier président de la République algérienne, prônant le socialisme et le soutien aux mouvements anticoloniaux.",
+      }
+    }
+  }
 ];
-
 export const eras = [
   'Ottoman Period', 'Colonial Period', 'Abdelkader Era', 'Colonial Consolidation',
   'Early Nationalism', 'WWII & Awakening', 'Road to Revolution', 'The Revolution',

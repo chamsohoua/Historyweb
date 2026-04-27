@@ -1,4 +1,3 @@
-// src/components/games/VoiceGame.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LangContext';
@@ -7,8 +6,7 @@ const ROUNDS = [
   { id:1, quote:'"I did not surrender. I chose peace over continued bloodshed of my people."', quoteAr:'"لم أستسلم. اخترت السلام على الاستمرار في إراقة دماء شعبي."', speaker:'Emir Abdelkader', year:'1847', context:'After 15 years of resistance against France', options:['Emir Abdelkader','Ahmed Ben Bella',"Larbi Ben M'hidi",'Messali Hadj'], correct:0, icon:'🏇', color:'#DC2626' },
   { id:2, quote:'"La révolution est en marche et rien ne peut l\'arrêter."', quoteAr:'"الثورة في طريقها ولا شيء يمكن أن يوقفها."', speaker:"Larbi Ben M'hidi", year:'1957', context:'During the Battle of Algiers', options:['Abane Ramdane',"Larbi Ben M'hidi",'Zighoud Youcef','Mourad Didouche'], correct:1, icon:'🌟', color:'#1D4ED8' },
   { id:3, quote:'"Algeria is not French. Algeria is Algerian."', quoteAr:'"الجزائر ليست فرنسية. الجزائر جزائرية."', speaker:'Ferhat Abbas', year:'1943', context:'From the Manifesto of the Algerian People', options:['Messali Hadj','Ben Youcef Ben Khedda','Ferhat Abbas','Mohamed Boudiaf'], correct:2, icon:'📋', color:'#059669' },
-  { id:4, quote:'"El Djazaïr horra democratia!" — Algeria, free and democratic!', quoteAr:'"الجزائر حرة ديمقراطية!"', speaker:'The Hirak Protesters', year:'2019', context:'Chant heard every Friday during the Hirak movement', options:['FIS Supporters','The Hirak Protesters','FLN Congress','Army Officers'], correct:1, icon:'🌊', color:'#7C3AED' },
-  { id:5, quote:"\"We will nationalize our oil and gas — Algeria's wealth belongs to Algerians.\"", quoteAr:'"سنؤمم نفطنا وغازنا — ثروة الجزائر للجزائريين."', speaker:'Houari Boumediene', year:'1971', context:'Announcing the nationalization of hydrocarbons', options:['Ahmed Ben Bella','Chadli Bendjedid','Houari Boumediene','Liamine Zéroual'], correct:2, icon:'🛢️', color:'#D97706' },
+  { id:4, quote:"\"We will nationalize our oil and gas — Algeria's wealth belongs to Algerians.\"", quoteAr:'"سنؤمم نفطنا وغازنا — ثروة الجزائر للجزائريين."', speaker:'Houari Boumediene', year:'1971', context:'Announcing the nationalization of hydrocarbons', options:['Ahmed Ben Bella','Chadli Bendjedid','Houari Boumediene','Liamine Zéroual'], correct:2, icon:'🛢️', color:'#D97706' },
 ];
 
 export default function VoiceGame() {

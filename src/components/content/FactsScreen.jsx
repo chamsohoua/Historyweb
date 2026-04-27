@@ -1,4 +1,3 @@
-// src/components/content/FactsScreen.jsx
 import { useTranslation } from '../../i18n/LangContext';
 import { useContent }     from '../../hooks/useContent';
 
@@ -81,7 +80,6 @@ export default function FactsScreen() {
     <div style={{ background:'var(--bg-page)', minHeight:'100vh', padding:'var(--sp-12) var(--sp-8)' }}>
       <div style={{ maxWidth:'1200px', margin:'0 auto' }}>
 
-        {/* Header */}
         <div style={{ textAlign:'center', marginBottom:'var(--sp-12)' }}>
           <div style={{ fontSize:'4rem', marginBottom:'var(--sp-4)', animation:'float 3s ease-in-out infinite' }}>📊</div>
           <h1 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(2rem,5vw,3.5rem)', color:'var(--ink)', marginBottom:'var(--sp-3)' }}>
@@ -93,7 +91,6 @@ export default function FactsScreen() {
           <hr style={{ maxWidth:'200px', margin:'var(--sp-6) auto 0', border:'none', height:'4px', background:'repeating-linear-gradient(90deg,var(--green-mid) 0,var(--green-mid) 12px,var(--yellow) 12px,var(--yellow) 24px)', borderRadius:'4px' }}/>
         </div>
 
-        {/* Fact Categories */}
         {FACT_CATEGORIES.map((cat, ci) => (
           <div key={ci} className="anim-slide-up" style={{ animationDelay:`${ci*0.1}s`, marginBottom:'var(--sp-10)' }}>
             <div style={{ display:'flex', alignItems:'center', gap:'var(--sp-3)', marginBottom:'var(--sp-5)' }}>
@@ -124,7 +121,6 @@ export default function FactsScreen() {
           </div>
         ))}
 
-        {/* Timeline journey strip */}
         <div style={{ background:'var(--bg-surface)', border:'3px solid var(--border)', borderRadius:'var(--r-2xl)', padding:'var(--sp-8)', marginTop:'var(--sp-10)' }}>
           <h3 style={{ fontFamily:'var(--font-display)', color:'var(--ink)', marginBottom:'var(--sp-6)', textAlign:'center', fontSize:'1.4rem' }}>
             {t('facts.journey.title')}

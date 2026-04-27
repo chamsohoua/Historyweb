@@ -1,4 +1,3 @@
-// src/components/games/QuizGame.jsx
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LangContext';

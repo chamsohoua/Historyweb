@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { AuthProvider }   from './context/AuthContext';
 import { GameProvider }   from './context/GameContext';
@@ -13,7 +12,7 @@ import Timeline         from './components/timeline/Timeline';
 import LoginPage        from './components/auth/LoginPage';
 import SignupPage       from './components/auth/SignupPage';
 import PeopleGrid       from './components/people/PeopleGrid';
-import { PersonProfile } from './components/people/PeopleGrid';
+import PersonProfile from './components/people/PersonProfile';
 import GameHub          from './components/games/GameHub';
 import MapChallenge     from './components/games/MapChallenge';
 import QuizGame         from './components/games/QuizGame';
@@ -24,7 +23,7 @@ import GalleryScreen    from './components/content/GalleryScreen';
 
 import './styles/Global.css';
 
-function PersonProfilePage() {
+function PersonProfileWrapper() {
   const { id } = useParams();
   return <PersonProfile personId={id} />;
 }
@@ -62,7 +61,7 @@ export default function App() {
                   <Route path="/"           element={<AppShell><HomePage /></AppShell>} />
                   <Route path="/timeline"   element={<AppShell><Timeline /></AppShell>} />
                   <Route path="/people"     element={<AppShell><PeopleGrid /></AppShell>} />
-                  <Route path="/people/:id" element={<AppShell><PersonProfilePage /></AppShell>} />
+                  <Route path="/people/:id" element={<AppShell><PersonProfileWrapper /></AppShell>} />
                   <Route path="/games"      element={<AppShell><GameHub /></AppShell>} />
                   <Route path="/games/map"  element={<AppShell noFooter><MapChallenge /></AppShell>} />
                   <Route path="/games/quiz" element={<AppShell noFooter><QuizGame /></AppShell>} />

@@ -1,4 +1,3 @@
-// src/components/auth/SignupPage.jsx
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth }        from '../../context/AuthContext';
@@ -43,23 +42,19 @@ export default function SignupPage() {
       background: 'var(--bg-hero)', padding: 'var(--sp-8)',
       position: 'relative', overflow: 'hidden',
     }}>
-      {/* Dot grid */}
       <div style={{ position:'absolute', inset:0, backgroundImage:'radial-gradient(circle,rgba(26,143,79,0.07) 1.5px,transparent 1.5px)', backgroundSize:'28px 28px', pointerEvents:'none' }}/>
 
-      {/* Floating stickers */}
       {STICKERS.map((s, i) => (
         <div key={i} style={{ position:'absolute', top:s.top, left:s.left, right:s.right, fontSize:s.size, animation:`float ${s.speed} ease-in-out infinite`, animationDelay:s.delay, pointerEvents:'none', userSelect:'none', filter:'drop-shadow(2px 4px 8px rgba(0,0,0,0.12))' }}>
           {s.emoji}
         </div>
       ))}
 
-      {/* Back button */}
       <button className="btn btn-ghost btn-sm" onClick={() => navigate('/')}
         style={{ position:'absolute', top:'20px', left:'20px', zIndex:2 }}>
         ← Back
       </button>
 
-      {/* Card */}
       <div className="anim-bounce-in" style={{
         background:   'var(--bg-surface)',
         border:       '3px solid var(--border-mid)',
@@ -71,10 +66,8 @@ export default function SignupPage() {
         position:     'relative',
         zIndex:       1,
       }}>
-        {/* Rainbow top strip */}
         <div style={{ position:'absolute', top:0, left:0, right:0, height:'5px', background:'repeating-linear-gradient(90deg,var(--coral) 0,var(--coral) 16px,var(--yellow) 16px,var(--yellow) 32px,var(--sky) 32px,var(--sky) 48px,var(--green-mid) 48px,var(--green-mid) 64px)', borderRadius:'var(--r-2xl) var(--r-2xl) 0 0', opacity:0.7 }}/>
 
-        {/* Header */}
         <div style={{ textAlign:'center', marginBottom:'var(--sp-7)', marginTop:'var(--sp-2)' }}>
           <div className="anim-float" style={{ fontSize:'4rem', marginBottom:'var(--sp-3)', filter:'drop-shadow(0 6px 20px rgba(255,107,107,0.3))' }}>🎊</div>
           <h1 style={{ fontFamily:'var(--font-display)', fontSize:'1.9rem', fontWeight:800, color:'var(--ink)', marginBottom:'var(--sp-2)' }}>
@@ -83,7 +76,6 @@ export default function SignupPage() {
           <p style={{ color:'var(--ink-light)', fontSize:'0.9rem' }}>{t('auth.signup.sub')}</p>
         </div>
 
-        {/* Benefits strip */}
         <div style={{ display:'flex', justifyContent:'center', gap:'var(--sp-3)', marginBottom:'var(--sp-6)', flexWrap:'wrap' }}>
           {['🆓 Free','💾 Save Progress','🗺️ Map Challenge','🏆 Compete'].map(tag => (
             <span key={tag} style={{ background:'var(--green-bg)', border:'2px solid var(--green-light)', borderRadius:'var(--r-pill)', padding:'3px 12px', fontSize:'0.7rem', fontWeight:800, color:'var(--green-mid)' }}>
@@ -92,7 +84,6 @@ export default function SignupPage() {
           ))}
         </div>
 
-        {/* Form */}
         <form onSubmit={handle} style={{ display:'flex', flexDirection:'column', gap:'var(--sp-4)' }}>
           {FIELD_META.map(({ key, type, icon, label }) => (
             <div key={key}>

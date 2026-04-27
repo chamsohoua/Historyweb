@@ -1,4 +1,3 @@
-// src/components/content/GalleryScreen.jsx
 import { useState } from 'react';
 import { useTranslation } from '../../i18n/LangContext';
 import { useContent }     from '../../hooks/useContent';
@@ -15,7 +14,6 @@ const GALLERY_ITEMS = [
   { id:9,  titleKey:'gallery.item.ahaggar',     year:'Timeless',   catKey:'gallery.cat.nature',       icon:'🏔️', descKey:'gallery.item.ahaggar.desc',     color:'#6B7280' },
   { id:10, titleKey:'gallery.item.constantine', year:'Various',    catKey:'gallery.cat.architecture', icon:'🌉', descKey:'gallery.item.constantine.desc', color:'#38BDF8' },
   { id:11, titleKey:'gallery.item.ghardaia',    year:'11th c.',    catKey:'gallery.cat.architecture', icon:'🕌', descKey:'gallery.item.ghardaia.desc',    color:'#A78BFA' },
-  { id:12, titleKey:'gallery.item.hirak',       year:'2019',       catKey:'gallery.cat.modern',       icon:'🌊', descKey:'gallery.item.hirak.desc',       color:'#10B981' },
   { id:13, titleKey:'gallery.item.oases',       year:'Ancient',    catKey:'gallery.cat.nature',       icon:'🌴', descKey:'gallery.item.oases.desc',       color:'#16A34A' },
   { id:14, titleKey:'gallery.item.djurdjura',   year:'Timeless',   catKey:'gallery.cat.nature',       icon:'⛰️', descKey:'gallery.item.djurdjura.desc',   color:'#3B82F6' },
   { id:15, titleKey:'gallery.item.fatma',       year:'1830–1863',  catKey:'gallery.cat.heroes',       icon:'🌸', descKey:'gallery.item.fatma.desc',       color:'#EC4899' },
@@ -46,7 +44,6 @@ export default function GalleryScreen() {
     <div style={{ background:'var(--bg-page)', minHeight:'100vh', padding:'var(--sp-12) var(--sp-8)' }}>
       <div style={{ maxWidth:'1300px', margin:'0 auto' }}>
 
-        {/* Header */}
         <div style={{ textAlign:'center', marginBottom:'var(--sp-10)' }}>
           <div style={{ fontSize:'4rem', marginBottom:'var(--sp-4)', animation:'float 3s ease-in-out infinite' }}>🖼️</div>
           <h1 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(2rem,5vw,3.5rem)', color:'var(--ink)', marginBottom:'var(--sp-3)' }}>
@@ -57,7 +54,6 @@ export default function GalleryScreen() {
           </p>
         </div>
 
-        {/* Category filter pills */}
         <div style={{ display:'flex', flexWrap:'wrap', gap:'var(--sp-2)', justifyContent:'center', marginBottom:'var(--sp-8)' }}>
           {CAT_KEYS.map(key => (
             <button key={key} onClick={() => setFilterKey(key)} style={{
@@ -76,14 +72,12 @@ export default function GalleryScreen() {
           ))}
         </div>
 
-        {/* Masonry grid */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:'var(--sp-4)' }}>
           {visible.map((item, i) => {
             const isTall = i % 5 === 0 || i % 7 === 0;
             return (
               <div key={item.id} className="card anim-scale-in" style={{ animationDelay:`${i*0.05}s`, cursor:'pointer', gridRow:isTall?'span 2':'span 1', minHeight:isTall?'360px':'220px', display:'flex', flexDirection:'column', overflow:'hidden', borderColor:item.color+'22' }}
                 onClick={() => setSelected(item)}>
-                {/* Visual */}
                 <div style={{ flex:isTall?'1 1 220px':'1 1 120px', background:`linear-gradient(135deg,${item.color}22,${item.color}08)`, display:'flex', alignItems:'center', justifyContent:'center', position:'relative', overflow:'hidden', borderBottom:`1px solid ${item.color}22` }}>
                   <div style={{ position:'absolute', inset:0, backgroundImage:`radial-gradient(circle,${item.color}15 1px,transparent 1px)`, backgroundSize:'20px 20px', pointerEvents:'none' }}/>
                   <div style={{ fontSize:isTall?'5rem':'3.5rem', animation:`float ${3+(i%3)*0.5}s ease-in-out infinite`, filter:`drop-shadow(0 4px 12px ${item.color}44)`, position:'relative', zIndex:1 }}>
@@ -93,7 +87,6 @@ export default function GalleryScreen() {
                     {item.year}
                   </div>
                 </div>
-                {/* Info */}
                 <div style={{ padding:'var(--sp-4)', flex:'0 0 auto' }}>
                   <div style={{ fontSize:'0.65rem', fontWeight:800, color:item.color, textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:'4px' }}>
                     {t(item.catKey)}
@@ -109,7 +102,6 @@ export default function GalleryScreen() {
           })}
         </div>
 
-        {/* Lightbox */}
         {selected && (
           <div className="overlay-backdrop" onClick={() => setSelected(null)}>
             <div className="modal" onClick={e => e.stopPropagation()} style={{ maxWidth:'600px', overflow:'hidden', padding:0 }}>

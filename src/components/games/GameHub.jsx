@@ -1,4 +1,3 @@
-// src/components/games/GameHub.jsx
 import { useNavigate }    from 'react-router-dom';
 import { useAuth }        from '../../context/AuthContext';
 import { useTranslation } from '../../i18n/LangContext';
@@ -51,7 +50,6 @@ export default function GameHub() {
     <div style={{ minHeight:'100vh', background:'var(--bg-page)', padding:'var(--sp-12) var(--sp-8)' }}>
       <div style={{ maxWidth:'1100px', margin:'0 auto' }}>
 
-        {/* Header */}
         <div style={{ textAlign:'center', marginBottom:'var(--sp-12)' }}>
           <div style={{ fontSize:'4.5rem', marginBottom:'var(--sp-4)', animation:'float 3s ease-in-out infinite', filter:'drop-shadow(0 8px 24px rgba(255,217,61,0.4))' }}>
             🎮
@@ -64,7 +62,6 @@ export default function GameHub() {
           </p>
         </div>
 
-        {/* Game Cards */}
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'var(--sp-6)' }}>
           {GAMES.map((g, i) => {
             const locked = g.locked && isGuest;
@@ -84,7 +81,6 @@ export default function GameHub() {
           })}
         </div>
 
-        {/* Guest notice */}
         {isGuest && (
           <div style={{
             marginTop:    'var(--sp-8)',
@@ -118,7 +114,6 @@ export default function GameHub() {
   );
 }
 
-/* ── Individual game card with isolated hover ──────────────── */
 function GameCard({ game: g, locked, index: i, onPlay, t }) {
   return (
     <div
@@ -149,10 +144,8 @@ function GameCard({ game: g, locked, index: i, onPlay, t }) {
         e.currentTarget.style.boxShadow = `0 8px 0 ${g.shadow}, 0 16px 40px ${g.shadow}`;
       }}
     >
-      {/* Rotating shimmer overlay */}
       <div style={{ position:'absolute', inset:0, background:'conic-gradient(from 0deg, transparent 0%, rgba(255,255,255,0.06) 25%, transparent 50%)', animation:'spin 10s linear infinite', pointerEvents:'none' }}/>
 
-      {/* Badge top-right */}
       <div style={{
         position:      'absolute', top:'14px', right:'14px',
         background:    'rgba(255,255,255,0.2)',
@@ -164,7 +157,6 @@ function GameCard({ game: g, locked, index: i, onPlay, t }) {
         {locked ? '🔒 Login to Play' : g.badge}
       </div>
 
-      {/* Players badge bottom-left */}
       <div style={{
         position:   'absolute', bottom:'14px', left:'14px',
         background: 'rgba(0,0,0,0.25)',
@@ -174,29 +166,24 @@ function GameCard({ game: g, locked, index: i, onPlay, t }) {
         👥 {g.players}
       </div>
 
-      {/* Stars */}
       <div style={{ display:'flex', gap:'4px', position:'relative', zIndex:1 }}>
         {[1,2,3,4,5].map(n => (
           <span key={n} style={{ fontSize:'1rem', opacity: n <= g.stars ? 1 : 0.25, filter: n <= g.stars ? 'drop-shadow(0 0 4px rgba(255,217,61,0.8))' : 'none' }}>⭐</span>
         ))}
       </div>
 
-      {/* Icon */}
       <div style={{ fontSize:'5.5rem', animation:`float ${3 + i * 0.5}s ease-in-out infinite`, filter:'drop-shadow(0 8px 24px rgba(0,0,0,0.35))', position:'relative', zIndex:1 }}>
         {g.icon}
       </div>
 
-      {/* Title */}
       <h2 style={{ fontFamily:'var(--font-display)', fontSize:'1.6rem', fontWeight:800, color:'white', position:'relative', zIndex:1, lineHeight:1.15, textShadow:'0 2px 8px rgba(0,0,0,0.3)' }}>
         {t(`games.${g.id}`)}
       </h2>
 
-      {/* Desc */}
       <p style={{ fontSize:'0.87rem', color:'rgba(255,255,255,0.85)', maxWidth:'210px', lineHeight:1.65, position:'relative', zIndex:1, margin:0 }}>
         {t(`games.${g.id}.desc`)}
       </p>
 
-      {/* CTA button */}
       <button
         tabIndex={-1}
         style={{

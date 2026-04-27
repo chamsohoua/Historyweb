@@ -1,4 +1,3 @@
-// src/components/timeline/Timeline.jsx
 import { useState, useRef } from 'react';
 import { useNavigate }      from 'react-router-dom';
 import { useAuth }          from '../../context/AuthContext';
@@ -11,15 +10,14 @@ const CATEGORIES = ['All','colonial','resistance','nationalism','revolution','in
 
 export default function Timeline() {
   const { currentUser, isGuest } = useAuth();
-  const { t }        = useTranslation();
+  const { t, lang }        = useTranslation();
+
   const navigate     = useNavigate();
   const scrollRef    = useRef(null);
   const dragging     = useRef(false);
   const startX       = useRef(0);
   const scrollLeft   = useRef(0);
   const hasDragged   = useRef(false);
-
-  // Live events from Firestore (admin-editable)
   const { data: tlData } = useContent('timeline', { events: DEFAULT_TIMELINE });
   const timelineEvents = tlData?.events?.length ? tlData.events : DEFAULT_TIMELINE;
 
@@ -87,7 +85,7 @@ export default function Timeline() {
                 <div className="tl-event-card">
                   <span className="tl-event-icon">{ev.icon}</span>
                   <div className="tl-event-year" style={{ color:ev.color, fontFamily:'var(--font-display)', fontWeight:800 }}>{ev.year}</div>
-                  <div className="tl-event-title">{ev.title}</div>
+                  <div className="tl-event-title">{ev.content[lang]?.title || ev.content['en'].title}</div>
                   <div className="tl-event-stars">{[1,2,3,4,5].map(n=><span key={n} className={`tl-event-star${n<=ev.importance?' lit':''}`}>★</span>)}</div>
                 </div>
                 <div className="tl-event-stem"/>
@@ -121,17 +119,21 @@ export default function Timeline() {
               <div className="tl-detail-icon-wrap" style={{ borderColor:activeEv.color+'55', background:activeEv.color+'15' }}>{activeEv.icon}</div>
               <div>
                 <div className="tl-detail-year-badge" style={{ background:activeEv.color+'15', border:`2.5px solid ${activeEv.color}55`, color:activeEv.color }}>{activeEv.year}</div>
-                <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.1rem,3vw,1.5rem)', color:'var(--ink)', lineHeight:1.2, marginBottom:'8px' }}>{activeEv.title}</h2>
+                <h2 style={{ fontFamily:'var(--font-display)', fontSize:'clamp(1.1rem,3vw,1.5rem)', color:'var(--ink)', lineHeight:1.2, marginBottom:'8px' }}>{activeEv.content[lang]?.title || activeEv.content['en'].title}</h2>
                 <div style={{ display:'flex', gap:'6px', flexWrap:'wrap' }}>
                   <span className="badge badge-green">{activeEv.era}</span>
                   <span className="badge" style={{ background:activeEv.color+'15', color:activeEv.color, border:`2px solid ${activeEv.color}44` }}>{activeEv.category}</span>
                 </div>
               </div>
             </div>
-            <div style={{ textAlign:'right', direction:'rtl', fontFamily:'var(--font-arabic)', fontSize:'1.05rem', color:activeEv.color, padding:'var(--sp-3) var(--sp-4)', background:activeEv.color+'0D', border:`2px dashed ${activeEv.color}44`, borderRadius:'var(--r-lg)', marginBottom:'var(--sp-4)' }}>
-              {activeEv.titleAr}
-            </div>
-            <div className="tl-detail-body">{activeEv.body}</div>
+            {lang !== 'ar' && (
+        <div style={{ textAlign:'right', direction:'rtl', fontFamily:'var(--font-arabic)', fontSize:'1.05rem', color:activeEv.color, padding:'var(--sp-3) var(--sp-4)', background:activeEv.color+'0D', border:`2px dashed ${activeEv.color}44`, borderRadius:'var(--r-lg)', marginBottom:'var(--sp-4)' }}>
+          {activeEv.content.ar.title}
+        </div>
+      )}
+            <div className="tl-detail-body">
+        {activeEv.content[lang]?.body || activeEv.content['en'].body}
+      </div>
             <div style={{ marginTop:'var(--sp-6)', display:'flex', gap:'10px', justifyContent:'flex-end', flexWrap:'wrap' }}>
               <button className="btn btn-ghost btn-sm" onClick={() => setActiveEv(null)}>{t('timeline.modal.close')}</button>
               <button className="btn btn-green btn-sm" onClick={() => { setActiveEv(null); navigate('/games'); }}>{t('timeline.modal.quiz')}</button>

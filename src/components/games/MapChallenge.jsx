@@ -1,4 +1,3 @@
-// src/components/games/MapChallenge.jsx
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth }     from '../../context/AuthContext';
@@ -7,7 +6,6 @@ import { algeriaWilayas, mapQuestions, TOTAL_QUESTIONS } from '../../data/algeri
 import AlgeriaSVGMap   from './AlgeriaSVGMap';
 import '../../styles/MapChallenge.css';
 
-// ── Fake Lottie fallback (renders CSS celebration) ──────────────────────────
 function CelebrationOverlay({ type, onClose }) {
   const isFinale = type === 'finale';
 
@@ -71,7 +69,6 @@ function CelebrationOverlay({ type, onClose }) {
   );
 }
 
-// ── Circular Progress Ring ──────────────────────────────────────────────────
 function ProgressRing({ value, max, size = 100, stroke = 8 }) {
   const r           = (size - stroke) / 2;
   const circumference = 2 * Math.PI * r;
@@ -100,13 +97,11 @@ function ProgressRing({ value, max, size = 100, stroke = 8 }) {
   );
 }
 
-// ── Main Component ──────────────────────────────────────────────────────────
 export default function MapChallenge() {
   const { currentUser, isGuest, markQuestionComplete, paintRegion } = useAuth();
   const { triggerCorrect, triggerWrong, triggerFinale, showToast }  = useGame();
   const navigate = useNavigate();
 
-  // ── State ─────────────────────────────────────────────────
   const [currentQIdx,    setCurrentQIdx]    = useState(0);
   const [paintedRegions, setPaintedRegions] = useState(currentUser?.paintedRegions || {});
   const [completedIds,   setCompletedIds]   = useState(
@@ -115,17 +110,15 @@ export default function MapChallenge() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnswered,     setIsAnswered]      = useState(false);
   const [isShaking,      setIsShaking]       = useState(false);
-  const [celebration,    setCelebration]     = useState(null); // null | 'confetti' | 'stars' | 'finale'
+  const [celebration,    setCelebration]     = useState(null); 
   const [feedbackEmoji,  setFeedbackEmoji]   = useState(null);
   const [streak,         setStreak]          = useState(0);
   const [highlightRegion, setHighlightRegion] = useState(null);
 
-  // ── Derived ───────────────────────────────────────────────
   const paintedCount   = Object.keys(paintedRegions).length;
   const answeredCount  = completedIds.size;
   const progressPercent = (answeredCount / TOTAL_QUESTIONS) * 100;
 
-  // Skip already-answered questions
   const availableQuestions = useMemo(
     () => mapQuestions.filter(q => !completedIds.has(q.id)),
     [completedIds]
@@ -133,7 +126,6 @@ export default function MapChallenge() {
 
   const currentQuestion = availableQuestions[currentQIdx] || null;
 
-  // When a click-type question is active, highlight the target on the map
   useEffect(() => {
     if (currentQuestion?.type === 'click') {
       setHighlightRegion(currentQuestion.target);
@@ -142,7 +134,6 @@ export default function MapChallenge() {
     }
   }, [currentQuestion]);
 
-  // ── Guest Guard ───────────────────────────────────────────
   if (isGuest) {
     return (
       <div className="map-page">
@@ -166,7 +157,6 @@ export default function MapChallenge() {
     );
   }
 
-  // ── Finished ──────────────────────────────────────────────
   if (answeredCount >= TOTAL_QUESTIONS && !celebration) {
     return (
       <div className="map-page">
@@ -186,14 +176,12 @@ export default function MapChallenge() {
     );
   }
 
-  // ── Handlers ──────────────────────────────────────────────
 
   const handleCorrect = useCallback((questionId, regionCode = null) => {
     setIsAnswered(true);
     setFeedbackEmoji('⭐');
     setStreak(s => s + 1);
 
-    // Paint a region
     const colorIndex = paintedCount % 12;
     const targetCode = regionCode || currentQuestion?.target;
 
@@ -204,13 +192,11 @@ export default function MapChallenge() {
       setHighlightRegion(null);
     }
 
-    // Mark complete
     const newCompleted = new Set(completedIds);
     newCompleted.add(questionId);
     setCompletedIds(newCompleted);
     markQuestionComplete(questionId);
 
-    // Trigger celebration
     const newPainted = Object.keys(paintedRegions).length + (targetCode ? 1 : 0);
     if (newCompleted.size >= TOTAL_QUESTIONS) {
       setTimeout(() => {
@@ -222,7 +208,6 @@ export default function MapChallenge() {
       setCelebration('confetti');
     }
 
-    // Move to next after delay
     setTimeout(() => {
       setCurrentQIdx(i => Math.min(i, availableQuestions.length - 2));
       setSelectedAnswer(null);
@@ -246,7 +231,6 @@ export default function MapChallenge() {
     }, 800);
   }, [triggerWrong]);
 
-  // MCQ answer selection
   const handleMCQAnswer = (option) => {
     if (isAnswered) return;
     setSelectedAnswer(option);
@@ -257,7 +241,6 @@ export default function MapChallenge() {
     }
   };
 
-  // Map click handler
   const handleRegionClick = (wilaya) => {
     if (!currentQuestion || currentQuestion.type !== 'click' || isAnswered) return;
     if (wilaya.code === currentQuestion.target) {
@@ -274,11 +257,9 @@ export default function MapChallenge() {
     setIsAnswered(false);
   };
 
-  // ── Render ─────────────────────────────────────────────────────────────
   return (
     <div className="map-page">
 
-      {/* ── Celebration ─────────────────────────────────── */}
       {celebration && (
         <CelebrationOverlay
           type={celebration}
@@ -286,12 +267,10 @@ export default function MapChallenge() {
         />
       )}
 
-      {/* ── Feedback Flash ──────────────────────────────── */}
       {feedbackEmoji && (
         <div className="feedback-flash" aria-live="polite">{feedbackEmoji}</div>
       )}
 
-      {/* ── Header ──────────────────────────────────────── */}
       <div className="map-header">
         <div>
           <div className="map-header-title">🗺️ Map Challenge</div>
@@ -319,10 +298,8 @@ export default function MapChallenge() {
         </div>
       </div>
 
-      {/* ── Main Layout ─────────────────────────────────── */}
       <div className="map-main-layout">
 
-        {/* ── Left: Parchment Map ─────────────────────── */}
         <div className="parchment-container">
           <div className="parchment-bg">
             <div className="parchment-title">🗺️ الجمهورية الجزائرية الديمقراطية الشعبية</div>
@@ -348,7 +325,6 @@ export default function MapChallenge() {
               onRegionClick={handleRegionClick}
             />
 
-            {/* Legend */}
             <div className="map-legend">
               <div className="legend-item">
                 <div className="legend-dot" style={{ background: '#B8A898' }} /> Unpainted
@@ -360,10 +336,8 @@ export default function MapChallenge() {
           </div>
         </div>
 
-        {/* ── Right: Sidebar ──────────────────────────── */}
         <div className="map-sidebar">
 
-          {/* Progress Card */}
           <div className="map-progress-card">
             <h3>📊 Your Progress</h3>
             <ProgressRing value={answeredCount} max={TOTAL_QUESTIONS} />
@@ -386,7 +360,6 @@ export default function MapChallenge() {
             </div>
           </div>
 
-          {/* Current Question Card */}
           {currentQuestion ? (
             <div className={`question-card ${isShaking ? 'shake' : ''}`}>
 
@@ -396,14 +369,12 @@ export default function MapChallenge() {
 
               <div className="question-text">{currentQuestion.question}</div>
 
-              {/* Click-type hint */}
               {currentQuestion.type === 'click' && (
                 <div className="question-hint">
                   🖱️ Find and click the region on the map
                 </div>
               )}
 
-              {/* MCQ Options */}
               {currentQuestion.type === 'mcq' && (
                 <div className="answer-grid">
                   {currentQuestion.options.map((opt) => {
@@ -427,7 +398,6 @@ export default function MapChallenge() {
                 </div>
               )}
 
-              {/* Action buttons */}
               <div className="map-action-row">
                 <button className="btn-skip" onClick={handleSkip}>
                   Skip →
@@ -445,7 +415,6 @@ export default function MapChallenge() {
             </div>
           )}
 
-          {/* Highlight Info */}
           {currentQuestion?.type === 'click' && (() => {
             const targetWilaya = algeriaWilayas.find(w => w.code === currentQuestion.target);
             if (!targetWilaya) return null;

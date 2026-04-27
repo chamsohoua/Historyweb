@@ -1,4 +1,3 @@
-// src/components/home/HomePage.jsx
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LangContext';
@@ -45,7 +44,6 @@ const FEATURED = [
   timelineEvents.find(e => e.id === 'independence1962'),
   timelineEvents.find(e => e.id === 'abdelkader1832'),
   timelineEvents.find(e => e.id === 'setif1945'),
-  timelineEvents.find(e => e.id === 'hirak2019'),
   timelineEvents.find(e => e.id === 'mokrani1871'),
 ].filter(Boolean);
 
@@ -80,7 +78,6 @@ const { data: cms } = useContent('homepage', {
   const LIVE_QUOTES = cms?.quotes?.length ? cms.quotes : QUOTES_KEYS;
   const LIVE_FACTS  = cms?.facts?.length  ? cms.facts  : null;
   const LIVE_ERAS   = cms?.eras?.length   ? cms.eras   : null;
-  // ─────────────────────────────────────────────────────────
 
   const FACTS = LIVE_FACTS || [
     { emoji: '🦁', text: t('home.fact.1') || 'Algeria is home to the Barbary lion, once roaming its Atlas Mountains.' },
@@ -124,7 +121,6 @@ const { data: cms } = useContent('homepage', {
   return (
     <div style={{ background: 'var(--bg-page)', minHeight: '100vh' }}>
 
-      {/* ── HERO ── */}
       <section style={{ position:'relative', overflow:'hidden', background:'var(--bg-hero)', minHeight:'92vh', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'var(--sp-20) var(--sp-8) var(--sp-16)', borderBottom:'4px solid var(--border)' }}>
         <div style={{ position:'absolute', inset:0, backgroundImage:'radial-gradient(circle,rgba(26,143,79,0.08) 1.5px,transparent 1.5px)', backgroundSize:'28px 28px', pointerEvents:'none' }}/>
         <div style={{ position:'absolute', top:0, left:0, right:0, height:'8px', background:'linear-gradient(90deg,#006233 50%,white 50%)', opacity:0.45 }}/>
@@ -161,7 +157,6 @@ const { data: cms } = useContent('homepage', {
         <div style={{ position:'absolute', bottom:'24px', left:'50%', transform:'translateX(-50%)', animation:'float 2s ease-in-out infinite', color:'var(--ink-light)', fontSize:'1.4rem', zIndex:1 }}>↓</div>
       </section>
 
-      {/* ── STATS ── */}
       <section style={{ background:'var(--bg-surface)', borderBottom:'3px solid var(--border)', padding:'var(--sp-12) var(--sp-8)' }}>
         <div style={{ maxWidth:'1100px', margin:'0 auto', display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:'var(--sp-6)', textAlign:'center' }}>
           {STATS.map((s, i) => (
@@ -176,7 +171,6 @@ const { data: cms } = useContent('homepage', {
         </div>
       </section>
 
-      {/* ── QUOTE ── */}
       <section style={{ padding:'var(--sp-12) var(--sp-8)', background:'var(--bg-quote)', borderBottom:'3px solid var(--border)' }}>
         <div style={{ maxWidth:'760px', margin:'0 auto', textAlign:'center' }}>
           <div style={{ fontSize:'3.5rem', color:'var(--yellow-dark)', fontFamily:'Georgia', lineHeight:1, marginBottom:'8px', opacity:0.5 }}>"</div>
@@ -192,7 +186,6 @@ const { data: cms } = useContent('homepage', {
         </div>
       </section>
 
-      {/* ── FEATURED EVENTS ── */}
       <section style={{ padding:'var(--sp-16) var(--sp-8)', background:'var(--bg-page)' }}>
         <div style={{ maxWidth:'1300px', margin:'0 auto' }}>
           <div style={{ textAlign:'center', marginBottom:'var(--sp-10)' }}>
@@ -223,7 +216,6 @@ const { data: cms } = useContent('homepage', {
         </div>
       </section>
 
-      {/* ── EXPLORE GRID ── */}
       <section style={{ padding:'var(--sp-12) var(--sp-8)', background:'var(--bg-explore)', borderTop:'3px solid var(--border)', borderBottom:'3px solid var(--border)' }}>
         <div style={{ maxWidth:'1300px', margin:'0 auto' }}>
           <div style={{ textAlign:'center', marginBottom:'var(--sp-8)' }}>
@@ -246,7 +238,6 @@ const { data: cms } = useContent('homepage', {
         </div>
       </section>
 
-      {/* ── DID YOU KNOW ── */}
       <section style={{ padding:'var(--sp-16) var(--sp-8)', background:'var(--bg-page)' }}>
         <div style={{ maxWidth:'860px', margin:'0 auto', textAlign:'center' }}>
           <h2 style={{ fontFamily:'var(--font-display)', color:'var(--ink)', marginBottom:'var(--sp-8)' }}>💡 {t('home.facts.title')}</h2>
@@ -262,7 +253,6 @@ const { data: cms } = useContent('homepage', {
         </div>
       </section>
 
-      {/* ── ERA STRIPS ── */}
       <section style={{ padding:'var(--sp-16) var(--sp-8)', background:'var(--bg-eras)', borderTop:'3px solid var(--border)' }}>
         <div style={{ maxWidth:'1100px', margin:'0 auto' }}>
           <h2 style={{ fontFamily:'var(--font-display)', textAlign:'center', color:'var(--ink)', marginBottom:'var(--sp-8)' }}>📖 {t('home.eras.title')}</h2>
@@ -288,7 +278,6 @@ const { data: cms } = useContent('homepage', {
         </div>
       </section>
 
-      {/* ── CTA (guest only) ── */}
       {isGuest && (
         <section style={{ padding:'var(--sp-16) var(--sp-8)', background:'var(--bg-cta)', borderTop:'3px solid var(--border)' }}>
           <div style={{ maxWidth:'700px', margin:'0 auto', textAlign:'center' }}>

@@ -1,4 +1,3 @@
-// src/components/common/Toast.jsx
 import { useGame } from '../../context/GameContext';
 
 export default function Toast() {

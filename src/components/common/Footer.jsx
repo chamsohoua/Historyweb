@@ -1,4 +1,3 @@
-// src/components/common/Footer.jsx
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from '../../i18n/LangContext';
 
@@ -26,7 +25,6 @@ export default function Footer() {
       <div style={{ padding:'var(--sp-10) var(--sp-8)', maxWidth:'1300px', margin:'0 auto' }}>
         <div style={{ display:'grid', gridTemplateColumns:'2fr 1fr 1fr', gap:'var(--sp-8)', marginBottom:'var(--sp-8)' }}>
 
-          {/* Brand */}
           <div>
             <div onClick={() => navigate('/')} style={{ display:'flex', alignItems:'center', gap:'10px', fontFamily:'var(--font-display)', fontSize:'1.5rem', fontWeight:800, color:'var(--green)', cursor:'pointer', marginBottom:'var(--sp-3)', transition:'transform 0.2s var(--bounce)' }}
               onMouseEnter={e => e.currentTarget.style.transform='scale(1.04) rotate(-1deg)'}
@@ -44,7 +42,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links col 1 */}
           <div>
             <div style={{ fontFamily:'var(--font-display)', fontSize:'0.9rem', fontWeight:800, color:'var(--ink)', marginBottom:'var(--sp-4)' }}>{t('footer.explore')}</div>
             <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:'10px' }}>
@@ -56,7 +53,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Links col 2 */}
           <div>
             <div style={{ fontFamily:'var(--font-display)', fontSize:'0.9rem', fontWeight:800, color:'var(--ink)', marginBottom:'var(--sp-4)' }}>{t('footer.more')}</div>
             <ul style={{ listStyle:'none', display:'flex', flexDirection:'column', gap:'10px' }}>
@@ -69,7 +65,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div style={{ borderTop:'3px dashed var(--border)', paddingTop:'var(--sp-5)', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'var(--sp-3)' }}>
           <div style={{ fontSize:'0.82rem', color:'var(--ink-light)' }}>{t('footer.copyright')}</div>
           <div style={{ fontSize:'0.85rem', fontWeight:700, color:'var(--green)' }}>{t('footer.made')}</div>
